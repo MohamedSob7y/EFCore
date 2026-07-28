@@ -1,4 +1,6 @@
-﻿using EFCore_Sessions_Assignments.Context;
+﻿//using EFCore_Sessions_Assignments.Context;
+using EFCore_Sessions_Assignments.Assignment_Session_01.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCore_Sessions_Assignments
 {
@@ -44,14 +46,25 @@ namespace EFCore_Sessions_Assignments
 
 
 
-            using DbCompanyContext context = new DbCompanyContext();//this Syntax Exsist in C#8
-            //This object at Scobe of Main Function 
-            //After Finish All Code in this Function Main=> Close Connection Automatic
+            //using DbCompanyContext context = new DbCompanyContext();//this Syntax Exsist in C#8
+                                                                    //This object at Scobe of Main Function 
+                                                                    //After Finish All Code in this Function Main=> Close Connection Automatic
 
+
+
+
+            #region Apply All Migrations Automatic
+            /*context.Database.Migrate();*///Apply All Migration to Database دى طريق بدل ال update-database 
+           //بس هنا بيشوف لو فى اى migration in Application لسة متعملهاش اى Apply خلاص ضيفها واعملها apply Automatic عشان منساش 
+            //كل لما اعمل Run Check if application has Pending Migrations if Yes Apply this If Not Donothing يعنى شغال على طول ودى مشكلة طب لو اصلا مفيش اى Pending Migration وانا متاكد دى كدة مع كل Run لازم يروح يعمل Checking 
+            #endregion
 
             #endregion
             //===================================================
+            #region Open Connection With DbContext ITI For ASsignment 
 
+           using  ITIDbContext context = new ITIDbContext();
+            #endregion
 
 
 
