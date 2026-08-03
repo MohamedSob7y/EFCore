@@ -4,11 +4,10 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace EFCore_Sessions_Assignments.Assignment_Session_01.Models
+//namespace EFCore_Sessions_Assignments.Session01.Models
 //{
-//    public class Topics
+//    public class Project
 //    {
 //        public int Id { get; set; }
-//        public string Name { get; set; }
 //    }
 //}
